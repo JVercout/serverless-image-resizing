@@ -2,7 +2,8 @@
 
 set -o errexit
 
-stack_name=ServerlessImageResize
+#stack_name=ServerlessImageResizeBonowayDev
+stack_name=ServerlessImageResizeBonowayProd
 region="$(aws configure get region)"
 bucket_name="temp-serverless-resize-$(openssl rand -hex 8)"
 account_id="$(aws sts get-caller-identity --query Account --output text \
