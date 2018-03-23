@@ -18,6 +18,12 @@ Resizes images on the fly using Amazon S3, AWS Lambda, and Amazon API Gateway. U
 
    - Use the Amazon Linux Docker container image to build the package using your local system. This repo includes Makefile that will download Amazon Linux, install Node.js and developer tools, and build the extensions using Docker. Run `make all`.
 
+   ```
+   make image
+   make all
+   make dist
+   ```
+
 3. Deploy the CloudFormation stack
 
   Run `bin/deploy` to deploy the CloudFormation stack. It will create a temporary Amazon S3 bucket, package and upload the function, and create the Lambda function, Amazon API Gateway RestApi, and an S3 bucket for images via CloudFormation.
